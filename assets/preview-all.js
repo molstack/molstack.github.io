@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./chunks/_virtual_auto-entry.js","./chunks/register.js"])))=>i.map(i=>d[i]);
+import{t as e}from"./chunks/preload-helper.js";e(()=>import(`./chunks/_virtual_auto-entry.js`),__vite__mapDeps([0,1]),import.meta.url);

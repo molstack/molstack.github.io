@@ -1,0 +1,5 @@
+.mkl-is-hidden{display:none}.mkl-caret{animation:mkl-caret-blink 1.05s steps(1) infinite}@keyframes mkl-caret-blink{50%{fill-opacity:0}}.mkl-glitch{position:relative;display:inline-block}.mkl-glitch::before,
+.mkl-glitch::after{content:attr(data-text);position:absolute;inset:0;pointer-events:none;opacity:0;-webkit-text-fill-color:currentColor}.mkl-glitch::before{color:#22f0ff;clip-path:inset(0 0 55% 0)}.mkl-glitch::after{color:#ff3ea5;clip-path:inset(55% 0 0 0)}.mkl-glitch:hover::before,
+.mkl-glitch:hover::after{opacity:.9}.mkl-glitch:hover::before{animation:mkl-glitch-a .38s steps(2) 2}.mkl-glitch:hover::after{animation:mkl-glitch-b .38s steps(2) 2}@keyframes mkl-glitch-a{0%{transform:translate(0,0)}33%{transform:translate(-3px,1px)}66%{transform:translate(2px,-1px)}100%{transform:translate(0,0)}}@keyframes mkl-glitch-b{0%{transform:translate(0,0)}33%{transform:translate(3px,-1px)}66%{transform:translate(-2px,1px)}100%{transform:translate(0,0)}}html{scrollbar-color:#1d2536 #05060a;scrollbar-width:thin}@media (prefers-reduced-motion: reduce){.mkl-caret,
+    .mkl-glitch:hover::before,
+    .mkl-glitch:hover::after{animation:none}}

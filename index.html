@@ -6,7 +6,7 @@
         <meta name="description" content="Where Design Meets Creation.">
         <title>Makelier Template Marketplace</title>
         <link rel="stylesheet" href="./assets/home-CZGFvpOu.css">
-        <link rel="stylesheet" href="./assets/preload-helper-CoSiO9ec.css">
+        <link rel="stylesheet" href="./assets/preload-helper-BotgWChS.css">
     </head>
     <body class="mkl-page mkl-page--home">
         <div
@@ -16,7 +16,12 @@
                 class="mkl:pointer-events-none mkl:fixed mkl:inset-0 mkl:z-[70] mkl:opacity-[.06] mkl:mix-blend-overlay mkl:bg-[repeating-linear-gradient(0deg,#fff_0,#fff_1px,transparent_1px,transparent_3px)]"></div>
             <nav
                 data-component="site-nav"
-                class="mkl:fixed mkl:inset-x-0 mkl:top-0 mkl:z-50 mkl:border-b mkl:border-white/[0.06] mkl:bg-ink-950/70 mkl:backdrop-blur-xl">
+                data-site-nav="true"
+                data-open="false"
+                class="mkl:group/nav mkl:fixed mkl:inset-x-0 mkl:top-0 mkl:z-50 mkl:border-b mkl:border-white/[0.06]">
+                <div
+                    aria-hidden="true"
+                    class="mkl:pointer-events-none mkl:absolute mkl:inset-0 mkl:-z-10 mkl:bg-ink-950/70 mkl:backdrop-blur-xl"></div>
                 <div
                     class="mkl:mx-auto mkl:flex mkl:h-14 mkl:w-full mkl:max-w-[1240px] mkl:items-center mkl:justify-between mkl:px-6">
                     <a
@@ -77,20 +82,60 @@
                                 d="M416.420,496.788 L416.965,987.974 C416.965,987.974 417.433,1004.642 436.368,1007.554 C437.171,1007.849 551.916,1028.491 551.916,1028.491 C551.916,1028.491 575.297,1029.992 575.116,989.094 C575.386,987.527 574.991,520.932 574.991,520.932 L416.420,496.788 Z"></path>
                         </svg>
                         <span
-                            class="mkl:font-sans mkl:text-xs mkl:font-medium mkl:tracking-tight mkl:text-zinc-300 mkl:whitespace-nowrap mkl:sm:text-sm mkl:pt-2">Template Marketplace</span>
+                            class="mkl:pt-2 mkl:whitespace-nowrap mkl:font-sans mkl:text-xs mkl:font-medium mkl:tracking-tight mkl:text-zinc-300 mkl:sm:text-sm">Template Marketplace</span>
                     </a>
                     <div
-                        class="mkl:flex mkl:items-center mkl:gap-0.5 mkl:font-mono mkl:text-[11px] mkl:uppercase mkl:tracking-[.18em] mkl:sm:gap-1"><a
+                        class="mkl:hidden mkl:items-center mkl:gap-1 mkl:font-mono mkl:text-[11px] mkl:uppercase mkl:tracking-[.18em] mkl:md:flex"><a
                         href="./"
                         aria-current="page"
-                        class="mkl:rounded-md mkl:px-2.5 mkl:py-2 mkl:text-zinc-400 mkl:transition-colors mkl:hover:text-neon-cyan mkl:bg-neon-cyan/10 mkl:text-neon-cyan mkl:sm:px-3">Templates</a><a
+                        class="mkl:rounded-md mkl:bg-neon-cyan/10 mkl:px-2.5 mkl:py-2 mkl:text-neon-cyan mkl:transition-colors mkl:hover:text-neon-cyan mkl:sm:px-3">Templates</a><a
                         href="./pricing.html"
                         class="mkl:rounded-md mkl:px-2.5 mkl:py-2 mkl:text-zinc-400 mkl:transition-colors mkl:hover:text-neon-cyan mkl:sm:px-3">Pricing</a><a
                         href="https://github.com/xizon/Makelier"
                         target="_blank"
-                        rel="noopener"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
                         class="mkl:ml-1 mkl:inline-flex mkl:size-9 mkl:items-center mkl:justify-center mkl:rounded-md mkl:border mkl:border-white/10 mkl:text-zinc-300 mkl:transition-colors mkl:hover:border-neon-cyan/50 mkl:hover:text-neon-cyan mkl:hover:shadow-[0_0_18px_-4px_rgba(34,240,255,.6)] mkl:focus-visible:outline-2 mkl:focus-visible:outline-neon-cyan"><svg width="20" class="mkl:size-[18px]" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path
                         d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></div>
+                    <button
+                        type="button"
+                        data-nav-toggle="true"
+                        data-label-open="Open menu"
+                        data-label-close="Close menu"
+                        aria-label="Open menu"
+                        aria-expanded="false"
+                        aria-controls="mkl-site-nav-panel"
+                        class="mkl:-mr-2 mkl:inline-flex mkl:size-11 mkl:cursor-pointer mkl:items-center mkl:justify-center mkl:rounded-md mkl:text-zinc-200 mkl:transition-colors mkl:hover:text-neon-cyan mkl:focus-visible:outline-2 mkl:focus-visible:outline-neon-cyan mkl:md:hidden mkl:group-data-[open=true]/nav:text-neon-cyan"><span aria-hidden="true" class="mkl:relative mkl:block mkl:h-4 mkl:w-5"><span
+                        class="mkl:absolute mkl:left-0 mkl:h-0.5 mkl:w-full mkl:rounded-full mkl:bg-current mkl:transition-all mkl:duration-300 mkl:top-0 mkl:group-data-[open=true]/nav:translate-y-[7px] mkl:group-data-[open=true]/nav:rotate-45"></span><span
+                        class="mkl:absolute mkl:left-0 mkl:h-0.5 mkl:w-full mkl:rounded-full mkl:bg-current mkl:transition-all mkl:duration-300 mkl:top-[7px] mkl:group-data-[open=true]/nav:scale-x-0 mkl:group-data-[open=true]/nav:opacity-0"></span><span
+                        class="mkl:absolute mkl:left-0 mkl:h-0.5 mkl:w-full mkl:rounded-full mkl:bg-current mkl:transition-all mkl:duration-300 mkl:top-[14px] mkl:group-data-[open=true]/nav:-translate-y-[7px] mkl:group-data-[open=true]/nav:-rotate-45"></span></span></button>
+                </div>
+                <div
+                    id="mkl-site-nav-panel"
+                    data-nav-panel="true"
+                    class="mkl:invisible mkl:fixed mkl:inset-x-0 mkl:bottom-0 mkl:top-14 mkl:z-40 mkl:-translate-y-2 mkl:overflow-y-auto mkl:overscroll-contain mkl:bg-ink-950/95 mkl:opacity-0 mkl:backdrop-blur-2xl mkl:transition-[opacity,translate,visibility] mkl:duration-300 mkl:md:hidden mkl:group-data-[open=true]/nav:visible mkl:group-data-[open=true]/nav:translate-y-0 mkl:group-data-[open=true]/nav:opacity-100">
+                    <ul
+                        data-nav-list="true"
+                        class="mkl:mx-auto mkl:w-full mkl:max-w-[1240px] mkl:border-t mkl:border-white/[0.04]">
+                        <li><a
+                            href="./"
+                            aria-current="page"
+                            class="mkl:flex mkl:items-center mkl:gap-4 mkl:border-b mkl:border-white/[0.06] mkl:px-6 mkl:py-5 mkl:font-mono mkl:text-sm mkl:uppercase mkl:tracking-[.18em] mkl:transition-colors mkl:active:bg-white/[0.06] mkl:focus-visible:outline-2 mkl:focus-visible:-outline-offset-2 mkl:focus-visible:outline-neon-cyan mkl:bg-neon-cyan/[0.07] mkl:text-neon-cyan"><span class="mkl:text-[11px] mkl:tracking-widest mkl:text-neon-cyan">01</span><span>Templates</span><span aria-hidden="true" class="mkl:ml-auto mkl:text-zinc-600">→</span></a></li>
+                        <li><a
+                            href="./pricing.html"
+                            class="mkl:flex mkl:items-center mkl:gap-4 mkl:border-b mkl:border-white/[0.06] mkl:px-6 mkl:py-5 mkl:font-mono mkl:text-sm mkl:uppercase mkl:tracking-[.18em] mkl:transition-colors mkl:active:bg-white/[0.06] mkl:focus-visible:outline-2 mkl:focus-visible:-outline-offset-2 mkl:focus-visible:outline-neon-cyan mkl:text-zinc-300 mkl:hover:text-neon-cyan"><span class="mkl:text-[11px] mkl:tracking-widest mkl:text-zinc-600">02</span><span>Pricing</span><span aria-hidden="true" class="mkl:ml-auto mkl:text-zinc-600">→</span></a></li>
+                        <li><a
+                            href="https://github.com/xizon/Makelier"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mkl:flex mkl:items-center mkl:gap-4 mkl:border-b mkl:border-white/[0.06] mkl:px-6 mkl:py-5 mkl:font-mono mkl:text-sm mkl:uppercase mkl:tracking-[.18em] mkl:transition-colors mkl:active:bg-white/[0.06] mkl:focus-visible:outline-2 mkl:focus-visible:-outline-offset-2 mkl:focus-visible:outline-neon-cyan mkl:text-zinc-300 mkl:hover:text-neon-cyan"><span class="mkl:text-[11px] mkl:tracking-widest mkl:text-zinc-600">03</span><span class="mkl:inline-flex mkl:shrink-0 mkl:items-center"><svg
+                            width="20"
+                            class="mkl:size-[18px]"
+                            viewBox="0 0 16 16"
+                            fill="currentColor"
+                            aria-hidden="true"><path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></span><span>GitHub</span><span aria-hidden="true" class="mkl:ml-auto mkl:text-zinc-600">↗</span></a></li>
+                    </ul>
                 </div>
             </nav>
             <header
@@ -117,9 +162,9 @@
                             class="mkl:mb-4 mkl:inline-flex mkl:items-center mkl:gap-2 mkl:rounded-full mkl:border mkl:border-neon-cyan/25 mkl:bg-neon-cyan/[0.06] mkl:px-3 mkl:py-1 mkl:font-mono mkl:text-[11px] mkl:uppercase mkl:tracking-[.22em] mkl:text-neon-cyan"><span class="mkl:size-1.5 mkl:animate-pulse-dot mkl:rounded-full mkl:bg-neon-cyan"></span>Template Marketplace</p>
                         <h1
                             data-hero-in="true"
-                            class="mkl:text-[clamp(2rem,3.7vw,3.2rem)] mkl:font-extrabold mkl:leading-[1.04] mkl:tracking-tight mkl:text-white"><span class="mkl:sr-only">Makelier Template Marketplace — </span>Where Design Meets <span
+                            class="mkl:text-[clamp(2rem,3.7vw,3.2rem)] mkl:font-extrabold mkl:leading-[1.04] mkl:tracking-tight mkl:text-white"><span><span class="mkl:sr-only">Makelier Template Marketplace — </span>Where Design Meets <span
                             class="mkl-glitch mkl:bg-linear-to-r mkl:from-neon-cyan mkl:via-neon-violet mkl:to-neon-pink mkl:bg-clip-text mkl:text-transparent"
-                            data-text="Creation">Creation</span></h1>
+                            data-text="Creation">Creation</span></span></h1>
                         <p
                             data-hero-in="true"
                             class="mkl:mt-3 mkl:max-w-[34rem] mkl:text-sm mkl:leading-relaxed mkl:text-zinc-400">Immersive visuals, interactive animations and clean, maintainable code — website templates that are one command away.</p>
@@ -412,12 +457,12 @@
                                 href="https://uiux.cc/Makelier/sites/product-elegant/dist/home.html"
                                 target="_blank"
                                 rel="noopener"
-                                title="Elegant Product Live Preview"
-                                style="--from:#ede9fe;--to:#ddd6fe">
+                                title="Elegant Product"
+                                style="--from:#ede9fe;--to:#ddd6fe;">
                                 <img
                                     class="mkl:absolute mkl:inset-0 mkl:size-full mkl:object-cover mkl:opacity-90 mkl:saturate-[.9] mkl:transition mkl:duration-700 mkl:group-hover/preview:scale-[1.05] mkl:group-hover/preview:opacity-100 mkl:group-hover/preview:saturate-100"
                                     src="./assets/images/preview/product-elegant.png"
-                                    alt="Elegant Product preview"
+                                    alt="Elegant Product"
                                     loading="lazy">
                                 <span
                                     aria-hidden="true"
@@ -476,12 +521,12 @@
                                 href="https://uiux.cc/Makelier/sites/portfolio-modern/dist/home.html"
                                 target="_blank"
                                 rel="noopener"
-                                title="Modern Portfolio Live Preview"
-                                style="--from:#e0f2fe;--to:#bae6fd">
+                                title="Modern Portfolio"
+                                style="--from:#e0f2fe;--to:#bae6fd;">
                                 <img
                                     class="mkl:absolute mkl:inset-0 mkl:size-full mkl:object-cover mkl:opacity-90 mkl:saturate-[.9] mkl:transition mkl:duration-700 mkl:group-hover/preview:scale-[1.05] mkl:group-hover/preview:opacity-100 mkl:group-hover/preview:saturate-100"
                                     src="./assets/images/preview/portfolio-modern.png"
-                                    alt="Modern Portfolio preview"
+                                    alt="Modern Portfolio"
                                     loading="lazy">
                                 <span
                                     aria-hidden="true"
@@ -540,12 +585,12 @@
                                 href="https://uiux.cc/Makelier/sites/studio-immersive/dist/home.html"
                                 target="_blank"
                                 rel="noopener"
-                                title="Immersive Studio Live Preview"
-                                style="--from:#fce7f3;--to:#fbcfe8">
+                                title="Immersive Studio"
+                                style="--from:#fce7f3;--to:#fbcfe8;">
                                 <img
                                     class="mkl:absolute mkl:inset-0 mkl:size-full mkl:object-cover mkl:opacity-90 mkl:saturate-[.9] mkl:transition mkl:duration-700 mkl:group-hover/preview:scale-[1.05] mkl:group-hover/preview:opacity-100 mkl:group-hover/preview:saturate-100"
                                     src="./assets/images/preview/studio-immersive.png"
-                                    alt="Immersive Studio preview"
+                                    alt="Immersive Studio"
                                     loading="lazy">
                                 <span
                                     aria-hidden="true"
@@ -604,12 +649,12 @@
                                 href="https://uiux.cc/Makelier/sites/product-story-1/dist/home.html"
                                 target="_blank"
                                 rel="noopener"
-                                title="Product Story 1 Live Preview"
-                                style="--from:#dcfce7;--to:#bbf7d0">
+                                title="Product Story 1"
+                                style="--from:#dcfce7;--to:#bbf7d0;">
                                 <img
                                     class="mkl:absolute mkl:inset-0 mkl:size-full mkl:object-cover mkl:opacity-90 mkl:saturate-[.9] mkl:transition mkl:duration-700 mkl:group-hover/preview:scale-[1.05] mkl:group-hover/preview:opacity-100 mkl:group-hover/preview:saturate-100"
                                     src="./assets/images/preview/product-story-1.png"
-                                    alt="Product Story 1 preview"
+                                    alt="Product Story 1"
                                     loading="lazy">
                                 <span
                                     aria-hidden="true"
@@ -668,12 +713,12 @@
                                 href="https://uiux.cc/Makelier/sites/product-story-2/dist/home.html"
                                 target="_blank"
                                 rel="noopener"
-                                title="Product Story 2 Live Preview"
-                                style="--from:#fef3c7;--to:#fde68a">
+                                title="Product Story 2"
+                                style="--from:#fef3c7;--to:#fde68a;">
                                 <img
                                     class="mkl:absolute mkl:inset-0 mkl:size-full mkl:object-cover mkl:opacity-90 mkl:saturate-[.9] mkl:transition mkl:duration-700 mkl:group-hover/preview:scale-[1.05] mkl:group-hover/preview:opacity-100 mkl:group-hover/preview:saturate-100"
                                     src="./assets/images/preview/product-story-2.png"
-                                    alt="Product Story 2 preview"
+                                    alt="Product Story 2"
                                     loading="lazy">
                                 <span
                                     aria-hidden="true"
@@ -804,17 +849,20 @@
                     <div class="mkl-site-footer__socials mkl:flex mkl:items-center mkl:gap-3"><a
                         href="https://x.com/uiux_lab"
                         target="_blank"
-                        rel="noopener"
+                        rel="noopener noreferrer"
+                        aria-label="X"
                         class="mkl:inline-flex mkl:size-9 mkl:items-center mkl:justify-center mkl:rounded-lg mkl:border mkl:border-white/10 mkl:bg-white/[0.02] mkl:text-zinc-400 mkl:transition-all mkl:hover:border-neon-cyan/50 mkl:hover:bg-neon-cyan/10 mkl:hover:text-neon-cyan mkl:focus-visible:outline-2 mkl:focus-visible:outline-neon-cyan"><svg width="20" class="mkl:size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path
                         d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a><a
                         href="https://www.facebook.com/uiuxlabhome"
                         target="_blank"
-                        rel="noopener"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
                         class="mkl:inline-flex mkl:size-9 mkl:items-center mkl:justify-center mkl:rounded-lg mkl:border mkl:border-white/10 mkl:bg-white/[0.02] mkl:text-zinc-400 mkl:transition-all mkl:hover:border-neon-cyan/50 mkl:hover:bg-neon-cyan/10 mkl:hover:text-neon-cyan mkl:focus-visible:outline-2 mkl:focus-visible:outline-neon-cyan"><svg width="20" class="mkl:size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path
                         d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a><a
                         href="https://github.com/xizon/Makelier"
                         target="_blank"
-                        rel="noopener"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
                         class="mkl:inline-flex mkl:size-9 mkl:items-center mkl:justify-center mkl:rounded-lg mkl:border mkl:border-white/10 mkl:bg-white/[0.02] mkl:text-zinc-400 mkl:transition-all mkl:hover:border-neon-cyan/50 mkl:hover:bg-neon-cyan/10 mkl:hover:text-neon-cyan mkl:focus-visible:outline-2 mkl:focus-visible:outline-neon-cyan"><svg width="20" class="mkl:size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path
                         d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg></a></div>
                 </div>
@@ -826,6 +874,28 @@
                         class="mkl:text-zinc-500 mkl:transition-colors mkl:hover:text-neon-cyan">Makelier Template Marketplace</a>.</p>
                 </div>
             </footer>
+            <button
+                data-component="back-to-top"
+                type="button"
+                data-back-to-top="true"
+                data-threshold="400"
+                data-visible="false"
+                aria-label="Back to top"
+                title="Back to top"
+                class="mkl-back-to-top mkl:pointer-events-none mkl:invisible mkl:fixed mkl:bottom-[calc(1.5rem+env(safe-area-inset-bottom))] mkl:right-6 mkl:z-40 mkl:inline-flex mkl:size-11 mkl:translate-y-3 mkl:cursor-pointer mkl:items-center mkl:justify-center mkl:rounded-full mkl:border mkl:border-white/10 mkl:bg-ink-900/80 mkl:text-zinc-300 mkl:opacity-0 mkl:backdrop-blur-md mkl:transition-[opacity,translate,visibility,color,border-color,box-shadow] mkl:duration-300 mkl:hover:border-neon-cyan/50 mkl:hover:text-neon-cyan mkl:hover:shadow-[0_0_22px_-4px_rgba(34,240,255,.6)] mkl:focus-visible:outline-2 mkl:focus-visible:outline-offset-2 mkl:focus-visible:outline-neon-cyan mkl:data-[visible=true]:pointer-events-auto mkl:data-[visible=true]:visible mkl:data-[visible=true]:translate-y-0 mkl:data-[visible=true]:opacity-100 mkl:sm:right-8">
+                <svg
+                    class="mkl:size-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M12 19V5"></path>
+                    <path d="M5 12l7-7 7 7"></path>
+                </svg>
+            </button>
         </div>
         <script type="module" src="./assets/home.js"></script>
     </body>
